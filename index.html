@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ZDM Brico - Maintenance bâtiment et syndic en RDC">
+<title>ZDM Brico | Maintenance & Syndic</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f7fa;
+  color:#102a43;
+  line-height:1.6;
+}
+header{
+  background:#062b5c;
+  color:white;
+  padding:15px 20px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+header h1{
+  font-size:28px;
+  color:white;
+}
+header span{color:#ff7900}
+nav{
+  margin-top:10px;
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 7px;
+  font-size:14px;
+}
+.hero{
+  background:linear-gradient(135deg,#062b5c,#0b477f);
+  color:white;
+  text-align:center;
+  padding:55px 20px;
+}
+.hero h2{
+  font-size:38px;
+  margin-bottom:15px;
+}
+.hero h2 span{color:#ff7900}
+.hero p{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+}
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  background:#ff7900;
+  color:white;
+  padding:13px 24px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+section{
+  padding:45px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+.title{
+  text-align:center;
+  color:#062b5c;
+  font-size:30px;
+  margin-bottom:30px;
+}
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+.card{
+  background:white;
+  padding:22px;
+  border-radius:12px;
+  box-shadow:0 3px 12px #0002;
+  border-top:4px solid #ff7900;
+}
+.card h3{
+  color:#062b5c;
+  margin-bottom:8px;
+}
+.card p{font-size:14px}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 3px 10px #0003;
+}
+.tarif{
+  background:#062b5c;
+  color:white;
+  text-align:center;
+  border-radius:15px;
+  padding:30px 20px;
+}
+.tarif strong{
+  color:#ff7900;
+  font-size:38px;
+}
+form{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 3px 12px #0002;
+}
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  margin:8px 0 15px;
+  border:1px solid #ccc;
+  border-radius:7px;
+  font-size:15px;
+}
+textarea{min-height:120px}
+button{
+  width:100%;
+  padding:14px;
+  border:0;
+  border-radius:8px;
+  background:#ff7900;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+}
+.contact{
+  background:#062b5c;
+  color:white;
+  text-align:center;
+}
+.contact h2{color:white}
+.contact p{margin:8px}
+footer{
+  background:#031a36;
+  color:white;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+}
+#confirmation{
+  margin-top:20px;
+  padding:18px;
+  background:#dff7e5;
+  color:#176b35;
+  border-radius:10px;
+}
+.hidden{display:none}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>ZDM <span>BRICO</span></h1>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#photos">Réalisations</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#demande">Demander une intervention</a>
+  </nav>
+</header>
+
+<section class="hero" id="accueil">
+  <h2>Votre projet,<br><span>notre priorité !</span></h2>
+  <p>
+    ZDM Brico vous accompagne pour la maintenance bâtiment,
+    la plomberie, l'électricité, les travaux généraux,
+    la rénovation et le syndic de copropriété.
+  </p>
+  <a class="btn" href="#demande">Demander une intervention</a>
+</section>
+
+<section id="services">
+  <h2 class="title">Nos services</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>🔧 Maintenance bâtiment</h3>
+      <p>Entretien, réparation, dépannage et suivi de vos bâtiments.</p>
+    </div>
+
+    <div class="card">
+      <h3>🚰 Plomberie</h3>
+      <p>Installation, réparation, recherche de fuite et entretien.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚡ Électricité</h3>
+      <p>Installation, dépannage et travaux électriques.</p>
+    </div>
+
+    <div class="card">
+      <h3>🏗️ Travaux généraux</h3>
+      <p>Construction, rénovation, aménagement et réparation.</p>
+    </div>
+
+    <div class="card">
+      <h3>🏊 Hydraulique & Piscine</h3>
+      <p>Pompes, réseaux d'eau, réservoirs et équipements de piscine.</p>
+    </div>
+
+    <div class="card">
+      <h3>🏢 Syndic de copropriété</h3>
+      <p>Gestion, entretien des parties communes et suivi des travaux.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="photos">
+  <h2 class="title">ZDM Brico en action</h2>
+
+  <div class="gallery">
+
+    <img src="photo1.jpg" alt="ZDM Brico">
+    <img src="photo2.jpg" alt="ZDM Brico">
+    <img src="photo3.jpg" alt="ZDM Brico">
+    <img src="photo4.jpg" alt="ZDM Brico">
+    <img src="photo5.jpg" alt="ZDM Brico">
+
+  </div>
+</section>
+
+<section id="tarifs">
+  <div class="tarif">
+    <h2>Abonnement mensuel</h2>
+    <p>À partir de</p>
+    <strong>50 $</strong>
+    <p>Selon le contrat.</p>
+    <br>
+    <p>✔ Visite de contrôle</p>
+    <p>✔ Priorité d'intervention</p>
+    <p>✔ Conseils personnalisés</p>
+    <p>✔ Vidange de fosse septique gratuite selon le contrat</p>
+    <p>✔ Et d'autres avantages</p>
+  </div>
+</section>
+
+<section id="demande">
+  <h2 class="title">Demander une intervention</h2>
+
+  <form onsubmit="envoyerDemande(event)">
+
+    <label>Votre nom</label>
+    <input id="nom" type="text" required placeholder="Votre nom">
+
+    <label>Téléphone</label>
+    <input id="telephone" type="tel" required placeholder="+243...">
+
+    <label>Service demandé</label>
+    <select id="service" required>
+      <option value="">Choisir un service</option>
+      <option>Maintenance bâtiment</option>
+      <option>Plomberie</option>
+      <option>Électricité</option>
+      <option>Travaux généraux</option>
+      <option>Hydraulique</option>
+      <option>Piscine</option>
+      <option>Syndic de copropriété</option>
+    </select>
+
+    <label>Adresse d'intervention</label>
+    <input id="adresse" type="text" required placeholder="Adresse">
+
+    <label>Décrivez votre problème</label>
+    <textarea id="probleme" required placeholder="Expliquez votre besoin..."></textarea>
+
+    <button type="submit">Envoyer ma demande</button>
+
+  </form>
+
+  <div id="confirmation" class="hidden"></div>
+</section>
+
+<section class="contact">
+  <h2>Contactez ZDM Brico</h2>
+  <p>📞 +243 895 894 251</p>
+  <p>📧 ZDMBRICO@Gmail.com</p>
+  <p>▶️ YouTube : ZDM brico</p>
+  <p>📍 Matete Anunga 52b, Kinshasa - RDC</p>
+  <p>🌍 De Kinshasa à Lubumbashi et partout en RDC selon les besoins.</p>
+</section>
+
+<footer>
+  ZDM Brico — Votre satisfaction, notre engagement !
+  <br>
+  © 2026 ZDM Brico
+</footer>
+
+<script>
+function envoyerDemande(event){
+  event.preventDefault();
+
+  const nom=document.getElementById("nom").value;
+  const service=document.getElementById("service").value;
+
+  const numero="ZDM-"+Date.now().toString().slice(-6);
+
+  document.getElementById("confirmation").classList.remove("hidden");
+
+  document.getElementById("confirmation").innerHTML=
+  "✅ <strong>Demande envoyée !</strong><br><br>"+
+  "Merci "+nom+". Votre demande de <strong>"+service+
+  "</strong> a été enregistrée.<br><br>"+
+  "Numéro de demande : <strong>"+numero+
+  "</strong><br><br>"+
+  "ZDM Brico vous contactera prochainement.";
+}
+</script>
+
+</body>
+</html>

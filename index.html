@@ -8,323 +8,597 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+
 body{
-  font-family:Arial,sans-serif;
-  background:#f5f7fa;
-  color:#102a43;
-  line-height:1.6;
+font-family:Arial,sans-serif;
+background:#f4f6f8;
+color:#102a43;
+line-height:1.6;
 }
+
 header{
-  background:#062b5c;
-  color:white;
-  padding:15px 20px;
-  text-align:center;
-  position:sticky;
-  top:0;
-  z-index:10;
+background:#062b5c;
+color:white;
+padding:16px 20px;
+position:sticky;
+top:0;
+z-index:100;
+box-shadow:0 2px 10px #0003;
 }
-header h1{
-  font-size:28px;
-  color:white;
+
+.header{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:15px;
 }
-header span{color:#ff7900}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+.logo span{
+color:#ff7900;
+}
+
 nav{
-  margin-top:10px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
 }
+
 nav a{
-  color:white;
-  text-decoration:none;
-  margin:0 7px;
-  font-size:14px;
+color:white;
+text-decoration:none;
+font-size:14px;
+font-weight:bold;
 }
+
 .hero{
-  background:linear-gradient(135deg,#062b5c,#0b477f);
-  color:white;
-  text-align:center;
-  padding:55px 20px;
+background:linear-gradient(135deg,#062b5c,#0d4b82);
+color:white;
+text-align:center;
+padding:70px 20px;
 }
-.hero h2{
-  font-size:38px;
-  margin-bottom:15px;
+
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
 }
-.hero h2 span{color:#ff7900}
+
+.hero h1 span{
+color:#ff7900;
+}
+
 .hero p{
-  max-width:700px;
-  margin:auto;
-  font-size:18px;
+max-width:750px;
+margin:auto;
+font-size:18px;
 }
+
 .btn{
-  display:inline-block;
-  margin-top:25px;
-  background:#ff7900;
-  color:white;
-  padding:13px 24px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
+display:inline-block;
+margin-top:25px;
+padding:14px 25px;
+background:#ff7900;
+color:white;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+border:none;
+cursor:pointer;
 }
+
 section{
-  padding:45px 20px;
-  max-width:1100px;
-  margin:auto;
+max-width:1100px;
+margin:auto;
+padding:50px 20px;
 }
+
 .title{
-  text-align:center;
-  color:#062b5c;
-  font-size:30px;
-  margin-bottom:30px;
+text-align:center;
+font-size:30px;
+color:#062b5c;
+margin-bottom:30px;
 }
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
+
 .card{
-  background:white;
-  padding:22px;
-  border-radius:12px;
-  box-shadow:0 3px 12px #0002;
-  border-top:4px solid #ff7900;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 15px #0002;
+border-top:5px solid #ff7900;
 }
+
 .card h3{
-  color:#062b5c;
-  margin-bottom:8px;
+color:#062b5c;
+margin-bottom:10px;
+font-size:20px;
 }
-.card p{font-size:14px}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:15px;
+
+.card p{
+font-size:15px;
 }
-.gallery img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
-  border-radius:12px;
-  box-shadow:0 3px 10px #0003;
+
+.about{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 }
+
+.zone{
+background:#062b5c;
+color:white;
+border-radius:15px;
+padding:30px;
+}
+
+.zone h2{
+color:#ff7900;
+margin-bottom:15px;
+}
+
+.zone strong{
+color:#ffb000;
+}
+
 .tarif{
-  background:#062b5c;
-  color:white;
-  text-align:center;
-  border-radius:15px;
-  padding:30px 20px;
+background:white;
+border-radius:15px;
+padding:35px;
+text-align:center;
+box-shadow:0 4px 15px #0002;
 }
-.tarif strong{
-  color:#ff7900;
-  font-size:38px;
+
+.tarif .price{
+font-size:48px;
+font-weight:bold;
+color:#ff7900;
 }
+
+.tarif ul{
+list-style:none;
+margin:20px 0;
+}
+
+.tarif li{
+margin:8px;
+}
+
 form{
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 3px 12px #0002;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 4px 15px #0002;
+max-width:700px;
+margin:auto;
 }
+
+label{
+display:block;
+font-weight:bold;
+margin-top:12px;
+}
+
 input,select,textarea{
-  width:100%;
-  padding:13px;
-  margin:8px 0 15px;
-  border:1px solid #ccc;
-  border-radius:7px;
-  font-size:15px;
+width:100%;
+padding:13px;
+margin-top:6px;
+border:1px solid #ccd3da;
+border-radius:7px;
+font-size:15px;
 }
-textarea{min-height:120px}
+
+textarea{
+height:120px;
+resize:vertical;
+}
+
 button{
-  width:100%;
-  padding:14px;
-  border:0;
-  border-radius:8px;
-  background:#ff7900;
-  color:white;
-  font-size:17px;
-  font-weight:bold;
+width:100%;
+padding:14px;
+margin-top:20px;
+background:#ff7900;
+border:none;
+border-radius:8px;
+color:white;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
 }
+
+.confirmation{
+margin-top:20px;
+padding:20px;
+background:#e3f7e8;
+border-left:5px solid #20a050;
+border-radius:8px;
+color:#176b35;
+}
+
+.hidden{
+display:none;
+}
+
+.tracking{
+background:#eef4fa;
+border:2px solid #062b5c;
+border-radius:12px;
+padding:25px;
+margin-top:25px;
+}
+
+.status{
+display:inline-block;
+background:#ff7900;
+color:white;
+padding:8px 15px;
+border-radius:20px;
+font-weight:bold;
+margin:10px 0;
+}
+
 .contact{
-  background:#062b5c;
-  color:white;
-  text-align:center;
+background:#062b5c;
+color:white;
+text-align:center;
+max-width:none;
 }
-.contact h2{color:white}
-.contact p{margin:8px}
+
+.contact h2{
+color:#ff7900;
+margin-bottom:15px;
+}
+
+.contact p{
+margin:7px;
+}
+
 footer{
-  background:#031a36;
-  color:white;
-  text-align:center;
-  padding:20px;
-  font-size:14px;
+background:#031a36;
+color:white;
+text-align:center;
+padding:22px;
+font-size:14px;
 }
-#confirmation{
-  margin-top:20px;
-  padding:18px;
-  background:#dff7e5;
-  color:#176b35;
-  border-radius:10px;
+
+@media(max-width:700px){
+.header{
+flex-direction:column;
 }
-.hidden{display:none}
+
+nav{
+justify-content:center;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero{
+padding:50px 15px;
+}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>ZDM <span>BRICO</span></h1>
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#services">Services</a>
-    <a href="#photos">Réalisations</a>
-    <a href="#tarifs">Tarifs</a>
-    <a href="#demande">Demander une intervention</a>
-  </nav>
+<div class="header">
+<div class="logo">ZDM <span>BRICO</span></div>
+
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#services">Services</a>
+<a href="#apropos">À propos</a>
+<a href="#tarifs">Tarifs</a>
+<a href="#demande">Intervention</a>
+</nav>
+</div>
 </header>
 
 <section class="hero" id="accueil">
-  <h2>Votre projet,<br><span>notre priorité !</span></h2>
-  <p>
-    ZDM Brico vous accompagne pour la maintenance bâtiment,
-    la plomberie, l'électricité, les travaux généraux,
-    la rénovation et le syndic de copropriété.
-  </p>
-  <a class="btn" href="#demande">Demander une intervention</a>
+
+<h1>Votre projet,<br><span>notre priorité !</span></h1>
+
+<p>
+ZDM Brico vous accompagne dans la maintenance bâtiment,
+la plomberie, l'électricité, l'hydraulique, les piscines,
+les travaux généraux et le syndic de copropriété.
+</p>
+
+<a href="#demande" class="btn">Demander une intervention</a>
+
+</section>
+
+<section id="apropos">
+
+<h2 class="title">Pourquoi ZDM Brico ?</h2>
+
+<div class="about">
+
+<div class="card">
+<h3>Notre engagement</h3>
+
+<p>
+Notre engagement repose sur trois principes :
+<strong>Zèle dans le travail</strong>,
+<strong>Durabilité de nos ouvrages</strong>
+et <strong>Maîtrise de chaque détail</strong>.
+</p>
+
+<br>
+
+<p>
+Notre objectif est de fournir des solutions pratiques,
+fiables et adaptées à chaque bâtiment.
+</p>
+</div>
+
+<div class="zone">
+
+<h2>📍 Zone d'intervention</h2>
+
+<p>
+<strong>De Kinshasa à Lubumbashi</strong>
+et partout en <strong>RDC</strong> en cas de besoin.
+</p>
+
+<br>
+
+<p>✔ Kinshasa</p>
+<p>✔ Lubumbashi</p>
+<p>✔ Autres provinces</p>
+<p>✔ Interventions selon les besoins</p>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="services">
-  <h2 class="title">Nos services</h2>
 
-  <div class="services">
+<h2 class="title">Nos services</h2>
 
-    <div class="card">
-      <h3>🔧 Maintenance bâtiment</h3>
-      <p>Entretien, réparation, dépannage et suivi de vos bâtiments.</p>
-    </div>
+<div class="cards">
 
-    <div class="card">
-      <h3>🚰 Plomberie</h3>
-      <p>Installation, réparation, recherche de fuite et entretien.</p>
-    </div>
+<div class="card">
+<h3>🚰 Plomberie</h3>
+<p>
+Installation, réparation, entretien,
+recherche de fuite et dépannage.
+</p>
+</div>
 
-    <div class="card">
-      <h3>⚡ Électricité</h3>
-      <p>Installation, dépannage et travaux électriques.</p>
-    </div>
+<div class="card">
+<h3>⚡ Électricité</h3>
+<p>
+Installation électrique, dépannage,
+maintenance et mise en sécurité.
+</p>
+</div>
 
-    <div class="card">
-      <h3>🏗️ Travaux généraux</h3>
-      <p>Construction, rénovation, aménagement et réparation.</p>
-    </div>
+<div class="card">
+<h3>💧 Hydraulique</h3>
+<p>
+Pompes, réservoirs, réseaux d'eau,
+surpresseurs et installations hydrauliques.
+</p>
+</div>
 
-    <div class="card">
-      <h3>🏊 Hydraulique & Piscine</h3>
-      <p>Pompes, réseaux d'eau, réservoirs et équipements de piscine.</p>
-    </div>
+<div class="card">
+<h3>🏊 Piscine</h3>
+<p>
+Installation, entretien, pompage,
+filtration et maintenance des piscines.
+</p>
+</div>
 
-    <div class="card">
-      <h3>🏢 Syndic de copropriété</h3>
-      <p>Gestion, entretien des parties communes et suivi des travaux.</p>
-    </div>
+<div class="card">
+<h3>🏗️ Maintenance bâtiment</h3>
+<p>
+Entretien, réparation, rénovation
+et suivi technique des bâtiments.
+</p>
+</div>
 
-  </div>
-</section>
+<div class="card">
+<h3>🏢 Syndic de copropriété</h3>
+<p>
+Gestion des immeubles, entretien des parties
+communes et suivi des travaux.
+</p>
+</div>
 
-<section id="photos">
-  <h2 class="title">ZDM Brico en action</h2>
+<div class="card">
+<h3>🧱 Travaux généraux</h3>
+<p>
+Construction, aménagement,
+maçonnerie et rénovation.
+</p>
+</div>
 
-  <div class="gallery">
+<div class="card">
+<h3>🧹 Assainissement</h3>
+<p>
+Entretien, évacuation, fosses septiques
+et solutions d'assainissement.
+</p>
+</div>
 
-    <img src="photo1.jpg" alt="ZDM Brico">
-    <img src="photo2.jpg" alt="ZDM Brico">
-    <img src="photo3.jpg" alt="ZDM Brico">
-    <img src="photo4.jpg" alt="ZDM Brico">
-    <img src="photo5.jpg" alt="ZDM Brico">
+</div>
 
-  </div>
 </section>
 
 <section id="tarifs">
-  <div class="tarif">
-    <h2>Abonnement mensuel</h2>
-    <p>À partir de</p>
-    <strong>50 $</strong>
-    <p>Selon le contrat.</p>
-    <br>
-    <p>✔ Visite de contrôle</p>
-    <p>✔ Priorité d'intervention</p>
-    <p>✔ Conseils personnalisés</p>
-    <p>✔ Vidange de fosse septique gratuite selon le contrat</p>
-    <p>✔ Et d'autres avantages</p>
-  </div>
+
+<h2 class="title">Nos tarifs en vigueur</h2>
+
+<div class="tarif">
+
+<h3>Abonnement mensuel</h3>
+
+<div class="price">50$</div>
+
+<p>À partir de 50$ par mois selon le contrat.</p>
+
+<ul>
+<li>✔ Visite de contrôle gratuite</li>
+<li>✔ Priorité d'intervention</li>
+<li>✔ Réductions sur certains travaux</li>
+<li>✔ Conseils personnalisés</li>
+<li>✔ Vidange de fosse septique gratuite selon le contrat</li>
+<li>✔ Et d'autres avantages</li>
+</ul>
+
+<p>
+<strong>Particuliers • Immeubles • Entreprises • Syndics</strong>
+</p>
+
+</div>
+
 </section>
 
 <section id="demande">
-  <h2 class="title">Demander une intervention</h2>
 
-  <form onsubmit="envoyerDemande(event)">
+<h2 class="title">Demander une intervention</h2>
 
-    <label>Votre nom</label>
-    <input id="nom" type="text" required placeholder="Votre nom">
+<form onsubmit="envoyerDemande(event)">
 
-    <label>Téléphone</label>
-    <input id="telephone" type="tel" required placeholder="+243...">
+<label for="nom">Nom complet</label>
+<input id="nom" type="text" placeholder="Votre nom" required>
 
-    <label>Service demandé</label>
-    <select id="service" required>
-      <option value="">Choisir un service</option>
-      <option>Maintenance bâtiment</option>
-      <option>Plomberie</option>
-      <option>Électricité</option>
-      <option>Travaux généraux</option>
-      <option>Hydraulique</option>
-      <option>Piscine</option>
-      <option>Syndic de copropriété</option>
-    </select>
+<label for="telephone">Téléphone</label>
+<input id="telephone" type="tel" placeholder="+243..." required>
 
-    <label>Adresse d'intervention</label>
-    <input id="adresse" type="text" required placeholder="Adresse">
+<label for="service">Service demandé</label>
 
-    <label>Décrivez votre problème</label>
-    <textarea id="probleme" required placeholder="Expliquez votre besoin..."></textarea>
+<select id="service" required>
+<option value="">Choisissez un service</option>
+<option>Plomberie</option>
+<option>Électricité</option>
+<option>Hydraulique</option>
+<option>Piscine</option>
+<option>Maintenance bâtiment</option>
+<option>Travaux généraux</option>
+<option>Assainissement</option>
+<option>Syndic de copropriété</option>
+</select>
 
-    <button type="submit">Envoyer ma demande</button>
+<label for="adresse">Adresse d'intervention</label>
+<input id="adresse" type="text" placeholder="Adresse du chantier" required>
 
-  </form>
+<label for="probleme">Décrivez votre problème</label>
+<textarea id="probleme" placeholder="Expliquez-nous votre besoin..." required></textarea>
 
-  <div id="confirmation" class="hidden"></div>
+<button type="submit">📩 Envoyer la demande</button>
+
+</form>
+
+<div id="confirmation" class="confirmation hidden"></div>
+
+<div id="trackingBox" class="tracking hidden">
+
+<h3>📍 Suivi de votre demande</h3>
+
+<p id="trackingText"></p>
+
+<div class="status" id="statut">
+Demande reçue
+</div>
+
+<p>
+🕐 Heure de réception :
+<strong id="heure"></strong>
+</p>
+
+<p>
+Un technicien ZDM Brico pourra vous contacter
+pour confirmer l'intervention.
+</p>
+
+</div>
+
 </section>
 
 <section class="contact">
-  <h2>Contactez ZDM Brico</h2>
-  <p>📞 +243 895 894 251</p>
-  <p>📧 ZDMBRICO@Gmail.com</p>
-  <p>▶️ YouTube : ZDM brico</p>
-  <p>📍 Matete Anunga 52b, Kinshasa - RDC</p>
-  <p>🌍 De Kinshasa à Lubumbashi et partout en RDC selon les besoins.</p>
+
+<h2>Contactez ZDM Brico</h2>
+
+<p>📞 <strong>+243 895 894 251</strong></p>
+
+<p>📧 <strong>ZDMBRICO@Gmail.com</strong></p>
+
+<p>▶️ <strong>YouTube : ZDM brico</strong></p>
+
+<p>📍 <strong>Matete Anunga 52b, Kinshasa - RDC</strong></p>
+
+<p>🌍 De Kinshasa à Lubumbashi et partout en RDC selon les besoins.</p>
+
 </section>
 
 <footer>
-  ZDM Brico — Votre satisfaction, notre engagement !
-  <br>
-  © 2026 ZDM Brico
+
+ZDM Brico — Votre satisfaction, notre engagement !
+
+<br><br>
+
+© 2026 ZDM Brico — Maintenance bâtiment & Syndic
+
 </footer>
 
 <script>
+
 function envoyerDemande(event){
-  event.preventDefault();
 
-  const nom=document.getElementById("nom").value;
-  const service=document.getElementById("service").value;
+event.preventDefault();
 
-  const numero="ZDM-"+Date.now().toString().slice(-6);
+const nom=document.getElementById("nom").value;
+const service=document.getElementById("service").value;
 
-  document.getElementById("confirmation").classList.remove("hidden");
+const numero="ZDM-"+Date.now().toString().slice(-6);
 
-  document.getElementById("confirmation").innerHTML=
-  "✅ <strong>Demande envoyée !</strong><br><br>"+
-  "Merci "+nom+". Votre demande de <strong>"+service+
-  "</strong> a été enregistrée.<br><br>"+
-  "Numéro de demande : <strong>"+numero+
-  "</strong><br><br>"+
-  "ZDM Brico vous contactera prochainement.";
+localStorage.setItem("zdm_demande",numero);
+
+document.getElementById("confirmation").classList.remove("hidden");
+
+document.getElementById("confirmation").innerHTML=
+"✅ <strong>Demande envoyée !</strong><br><br>"+
+"Merci "+nom+". Votre demande de <strong>"+service+
+"</strong> a été enregistrée.<br><br>"+
+"Numéro de demande : <strong>"+numero+
+"</strong><br><br>"+
+"ZDM Brico pourra bientôt vous contacter.";
+
+document.getElementById("trackingBox").classList.remove("hidden");
+
+document.getElementById("trackingText").innerText=
+"Votre demande "+numero+" est en cours de traitement.";
+
+document.getElementById("statut").innerText=
+"Demande reçue";
+
+document.getElementById("heure").innerText=
+new Date().toLocaleTimeString("fr-FR");
+
+document.getElementById("trackingBox").scrollIntoView({
+behavior:"smooth"
+});
+
 }
+
 </script>
 
 </body>
-</html>
+  </html>
